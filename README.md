@@ -6,41 +6,18 @@
 
 <br>
 
-## App created by using the following command:
+## App created (with postgresql) by using the following command:
 
 ```
-rails new hellorails
+rails new hellorails --database=postgresql
 ```
 
-<br>
-
-## Setup Postgres database:
-
-### 1. Delete this line in the Gemfile:
-
+## Install the pg gem:
 ```
-gem 'sqlite3'
+gem install pg
 ```
 
-### 2. Replace it with this code:
-
-```
-group :development, :test do
- gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
-end
-```
-
-### 3. We need to tell the Bundler to ignore the :production group gems in this project
-
-```
-bundle config set --local without production
-```
-
-### 4. Install all the other gems:
+## Install all the dependencies
 
 ```
 bundle install
